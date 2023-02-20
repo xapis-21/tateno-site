@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.grain {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  max-height: 800px;
+}
+
+.swiper-slide {  
+  max-width: 600px;
+}
+
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 1px solid #D6C9B5;
+}
+
+.swiper-pagination-bullet-active {
+  background: #D6C9B5;
+}
+
+.grain:after {
+  animation: grain 20s steps(10) infinite;
+  background-image: url("../public/grain.svg");
+  content: "";
+  height: 300%;
+  left: -50%;
+  opacity: 0.2;
+  position: fixed;
+  top: -100%;
+  width: 300%;
+  z-index: 2
+}
+.grain::before {
+  content: "";
+  height: 300%;
+  background-color: #1E1E1E;
+  left: 0;
+  opacity: .8;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  width: 300%;
+  z-index: 1
+ ;
+}
+
+@keyframes grain {
+  0%, 100% { transform:translate(0, 0) }
+  10% { transform:translate(-5%, -10%) }
+  20% { transform:translate(-15%, 5%) }
+  30% { transform:translate(7%, -25%) }
+  40% { transform:translate(-5%, 25%) }
+  50% { transform:translate(-15%, 10%) }
+  60% { transform:translate(15%, 0%) }
+  70% { transform:translate(0%, 15%) }
+  80% { transform:translate(3%, 35%) }
+  90% { transform:translate(-10%, 10%) }
+}
