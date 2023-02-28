@@ -10,30 +10,16 @@
   left: 0;
 }
 
-.swiper {
-  width: 100%;
-  height: 100%;
-  max-height: 800px;
+.splide__slide.photo {
+  height: 100vh;  
+  max-height: 600px;
 }
 
-.swiper-slide {  
-  max-width: 600px;
-}
 
-.swiper-pagination-bullet {
-  width: 20px;
-  height: 20px;
-  background-color: transparent;
-  border: 1px solid #D6C9B5;
-}
-
-.swiper-pagination-bullet-active {
-  background: #D6C9B5;
-}
 
 .grain:after {
   animation: grain 20s steps(10) infinite;
-  background-image: url("../public/grain.svg");
+  background-image: url("../../public/grain.svg");
   content: "";
   height: 300%;
   left: -50%;

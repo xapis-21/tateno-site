@@ -1,11 +1,9 @@
 import './globals.css'
 
 import {Fira_Mono } from '@next/font/google'
-import Cursor from './(components)/Cursor';
-import dynamic from 'next/dynamic'
-
-const Header = dynamic(() => import('./(components)/Header'), { ssr: false });
-const Footer = dynamic(() => import('./(components)/Footer'), { ssr: false });
+import Cursor from '../components/Cursor';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 
 const sans =Fira_Mono({
@@ -19,13 +17,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en"  className={`${sans.className} bg-dark`}>
       <head />
+     
+      <body>
       <Cursor/>
       <Header/>
-      <body>
         <div className='grain'/>
         {children}
+        <Footer/>
       </body>
-      <Footer/>
+     
     </html>
   )
 }

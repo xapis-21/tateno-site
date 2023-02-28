@@ -16,7 +16,7 @@ export const Ball = ({ pos, mvx, mvy, text,link }) => {
         x: mvx,
         y: mvy,
       }}
-      className={`h-60 w-60 grid place-items-center p-8 ${pos}`}
+      className={`h-60 w-60 grid place-items-center md:p-8 ${pos}`}
     >
       <Link href={link} className="text-wood font-light border border-wood h-60 w-60 relative text-2xl whitespace-nowrap rounded-full  grid place-items-center p-4">
         {text}
@@ -27,11 +27,13 @@ export const Ball = ({ pos, mvx, mvy, text,link }) => {
 
 const Hero = () => {
   const moving_values = [
-    { value: -2, pos: 'col-start-2', text: 'Photo',link:'/photo'},
-    { value: -3, pos: 'col-start-1', text: 'Website design',link:'/website-design' },
-    { value: 1, pos: 'col-start-2', text: 'Film',link:'film'},
-    { value: 4, pos: 'col-start-3', text: 'Graphics Design',link:'graphics-design' },
-    { value: 2, pos: 'col-start-2', text: 'Animation',link:'animation' },
+    { value: -2, pos: 'col-start-2', text: 'Photo',link:'/work/photography'},
+    { value: -3, pos: 'col-start-1', text: 'Website design',link:'/work/webdesign' },
+    { value: 4, pos: 'col-start-3 row-start-3', text: 'Film',link:'/work/film'},
+    { value: 4, pos: 'col-start-3', text: 'Graphics Design',link:'/work/graphics' },
+    { value: 2, pos: 'col-start-2', text: 'Animation',link:'/work/animation' },
+    { value: -4, pos: 'col-start-1 row-start-1', text: 'Art',link:'/work/art' },
+
   ]
   const [mx, setMx] = useState(0)
   const [my, setMy] = useState(0)
@@ -48,7 +50,7 @@ const Hero = () => {
 
   return (
     <div
-      className="w-screen h-screen grid place-items-center z-10"
+      className="w-screen h-screen hidden md:grid place-items-center z-10"
       onMouseMove={handleMouseMove}
       onMouseOut={handleMouseOut}
     >

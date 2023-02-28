@@ -5,7 +5,7 @@ const ReactPlayer = dynamic(() => import('react-player'), { ssr: false });
 
 const VideoBg = ({ videoSrc }) => {
   return (
-    <div>
+    <div className='hidden md:block'>
       <ReactPlayer
         url={videoSrc}
         playing={true}

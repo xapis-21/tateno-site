@@ -2,18 +2,16 @@
 import dynamic from 'next/dynamic'
 import { Cursor } from 'react-creative-cursor'
 import 'react-creative-cursor/dist/styles.css'
-const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
-  ssr: false,
-})
+import AnimatedCursor from 'react-animated-cursor'
 
 const TatCursor = () => {
   return (
     <>
       <AnimatedCursor
         innerSize={4}
-        outerSize={35}
+        outerSize={25}
         innerScale={1}
-        outerScale={2.5}
+        outerScale={1.8}
         outerAlpha={0}
         outerStyle={{
           backgroundColor: '#EEF0F2',
@@ -25,14 +23,6 @@ const TatCursor = () => {
         hasBlendMode={true}
         clickables={[
           'a',
-          'input[type="text"]',
-          'input[type="email"]',
-          'input[type="number"]',
-          'input[type="submit"]',
-          'input[type="image"]',
-          'label[for]',
-          'select',
-          'textarea',
           'button',
           '.link',
           '.photo'
